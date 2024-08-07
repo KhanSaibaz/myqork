@@ -8,8 +8,9 @@ const prizes = [
 function spin() {
     const box = document.getElementById('box');
     const randomDegree = Math.floor(Math.random() * 360 + 3600); // Spin at least 10 full rotations
-    box.style.transition = 'transform 4s ease-out';
-    box.style.transform = `rotate(${randomDegree}deg)`;
+    const spinWheel = document.querySelector('.spin-wheel'); // Select the spin wheel image
+    spinWheel.style.transition = 'transform 4s ease-out'; // Set the transition for smooth rotation
+    spinWheel.style.transform = `rotate(${randomDegree}deg)`; // Rotate the wheel
 
     // Update the current image index for the next spin
     currentImageIndex = Math.floor(Math.random() * prizes.length); // Randomly select a prize
