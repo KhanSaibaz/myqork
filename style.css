@@ -16,51 +16,47 @@ body {
 
 .mainbox {
   position: relative;
-  height: 500px; /* Increase the height */
-  width: 500px; /* Increase the width */
-  margin-top: 50px;
-}
-
-.box {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
-.spin-wheel {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform 4s ease-out; /* Smooth rotation */
-}
-
-.spin {
-  position: absolute;
-  top: 80%; /* Position below the image */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px; /* Set width for rectangle button */
-  height: 40px; /* Set height for rectangle button */
-  background-color: #ffcc00; /* Button color */
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 5px; /* Slightly rounded corners */
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .pointer {
   position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: -40px; /* Adjust as needed */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 20;
+}
+
+.pointer-img {
   width: 40px;
   height: auto;
-  z-index: 20;
+}
+
+.spin-wheel {
+  width: 80%; /* Adjust size as needed */
+  max-width: 450px; /* Ensure it scales up appropriately */
+  height: auto;
+  border-radius: 50%;
+  transform-origin: center center; /* Ensure rotation from the center */
+  transition: transform 4s ease-out;
+}
+
+.spin {
+  margin-top: 20px; /* Space between wheel and button */
+  width: 100px;
+  height: 40px;
+  background-color: #ffcc00;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10;
 }
 
 .popup {

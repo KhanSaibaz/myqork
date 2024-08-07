@@ -6,7 +6,6 @@ const prizes = [
 ];
 
 function spin() {
-    const box = document.getElementById('box');
     const randomDegree = Math.floor(Math.random() * 360 + 3600); // Spin at least 10 full rotations
     const spinWheel = document.querySelector('.spin-wheel'); // Select the spin wheel image
     spinWheel.style.transition = 'transform 4s ease-out'; // Set the transition for smooth rotation
