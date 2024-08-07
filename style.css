@@ -26,7 +26,7 @@ body {
 
 .pointer {
   position: absolute;
-  top: -40px; /* Adjust as needed */
+  top: 0; /* Adjust to align the pointer above the wheel */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -40,10 +40,10 @@ body {
 
 .spin-wheel {
   width: 80%; /* Adjust size as needed */
-  max-width: 450px; /* Ensure it scales up appropriately */
+  max-width: 450px; /* Make the wheel larger */
   height: auto;
   border-radius: 50%;
-  transform-origin: center center; /* Ensure rotation from the center */
+  transform-origin: center; /* Ensure rotation from the center */
   transition: transform 4s ease-out;
 }
 
